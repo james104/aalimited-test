@@ -1,17 +1,17 @@
 import { FetchSchoolResponse, RawSchool, School } from "../../types/school";
 
-export function fetchSchools(name?: string, limit?: number, offset?: number) {
+export function fetchSchools(name?: string, offset?: number, limit?: number) {
   const baseUrl = new URL(
     "https://api.csdi.gov.hk/apim/dataquery/api/?id=edb_rcd_1629267205213_58940&layer=asfps&bbox-crs=HK80&bbox=800000,800000,890000,890000"
   );
   if (name) {
     baseUrl.searchParams.append("Facility_Name", `*${name}*`);
   }
-  if (limit) {
-    baseUrl.searchParams.append("limit", limit.toString());
-  }
   if (offset) {
     baseUrl.searchParams.append("offset", offset.toString());
+  }
+  if (limit) {
+    baseUrl.searchParams.append("limit", limit.toString());
   }
 
   return fetch(baseUrl.toString()).then(
@@ -21,10 +21,10 @@ export function fetchSchools(name?: string, limit?: number, offset?: number) {
 
 export function fetchSchoolsByName(
   name: string = "",
-  limit: number = 4,
-  offset: number = 0
+  offset: number = 0,
+  limit: number = 4
 ) {
-  return fetchSchools(name, limit, offset);
+  return fetchSchools(name, offset, limit);
 }
 
 export function processRawSchools(rawSchools: RawSchool[]) {

@@ -1,30 +1,17 @@
-import type { ChangeEventHandler, Dispatch, FC, SetStateAction } from "react";
-import React, { useCallback, useRef } from "react";
-import { SchoolReducerDispatch } from "../../types/school";
-import { fetchSchoolsByName, processRawSchools } from "../../utils/api/func";
+import type { ChangeEventHandler, FC, RefObject } from "react";
+import React, { useCallback } from "react";
 import Btn from "../common/Btn";
 
 const SchoolSearchBar: FC<{
-  setFetchingSchools: Dispatch<SetStateAction<boolean>>;
-  dispatchSchools: SchoolReducerDispatch;
-}> = ({ setFetchingSchools, dispatchSchools }) => {
-  const searchBarInputValRef = useRef<string>("");
+  searchBarInputValRef: RefObject<string>;
+  searchSchools: () => void;
+}> = ({ searchBarInputValRef, searchSchools }) => {
   const onChange = useCallback<ChangeEventHandler<HTMLInputElement>>(
     ({ target: { value } }) => {
       searchBarInputValRef.current = value;
     },
     [searchBarInputValRef]
   );
-  const searchSchools = useCallback(async () => {
-    setFetchingSchools(true);
-    fetchSchoolsByName(searchBarInputValRef.current).then((fetchSchoolRes) => {
-      setFetchingSchools(false);
-      dispatchSchools({
-        type: "refresh_schools",
-        payload: processRawSchools(fetchSchoolRes.features),
-      });
-    });
-  }, [setFetchingSchools, dispatchSchools, searchBarInputValRef]);
 
   return (
     <div className="schoolSearchBar">

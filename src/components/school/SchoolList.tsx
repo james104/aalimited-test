@@ -1,26 +1,42 @@
 import type { FC } from "react";
-import React from "react";
+import React, { useCallback } from "react";
 import { School } from "../../types/school";
+import Btn from "../common/Btn";
 import SchoolListItem from "./SchoolListItem";
 
 const SchoolList: FC<{
   fetchingSchools: boolean;
+  fetchedAllSchools: boolean;
   schools: School[];
-}> = ({ fetchingSchools, schools }) => {
+  searchSchools: (refresh?: boolean) => void;
+}> = ({ fetchingSchools, fetchedAllSchools, schools, searchSchools }) => {
+  const fetchNextPage = useCallback(() => {
+    searchSchools(false);
+  }, [searchSchools]);
+
+  const noResults = !fetchingSchools && !schools.length;
+  const showMoreBtn = !fetchingSchools && !fetchedAllSchools && !noResults;
+
   return (
     <div className="schoolList">
       <div>
         <p>Popular schools</p>
       </div>
-      <div>
-        {fetchingSchools ? (
-          <p>fetching schools...</p>
+      <div className="schoolListItems">
+        {noResults ? (
+          <p>No Results</p>
         ) : (
           schools.map((school) => (
             <SchoolListItem key={school.id} school={school} />
           ))
         )}
+        {fetchingSchools && <p>Fetching Schools...</p>}
       </div>
+      {showMoreBtn && (
+        <Btn className="schoolListBtn" onClick={fetchNextPage}>
+          More
+        </Btn>
+      )}
     </div>
   );
 };

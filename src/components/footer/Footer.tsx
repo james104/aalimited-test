@@ -7,7 +7,7 @@ import Img from "../common/Img";
 const Footer: FC<{}> = ({}) => {
   return (
     <div className="footer">
-      <div className="footerContent" style={{ marginBottom: 48 }}>
+      <div className="footerContent">
         <Img src={w3c} />
         <Img src={wfa} />
       </div>

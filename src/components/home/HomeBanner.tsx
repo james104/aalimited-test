@@ -5,7 +5,7 @@ import Btn from "../common/Btn";
 const HomeBanner: FC = () => {
   return (
     <div className="banner" style={{ backgroundImage: `url(${banner})` }}>
-      <p className="bannerText">
+      <div className="bannerText">
         <p>Welcome to the AIO Study Platform</p>
         <h1>All-in-One Platform for Self-Learners</h1>
         <p>
@@ -13,7 +13,7 @@ const HomeBanner: FC = () => {
           et at fermentum. Sed id egestas nec odio sit.
         </p>
         <Btn className="bannerBtn">Read More</Btn>
-      </p>
+      </div>
     </div>
   );
 };

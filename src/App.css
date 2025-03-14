@@ -182,9 +182,19 @@ h1 {
 }
 
 .schoolList {
+  display: flex;
+  flex-direction: column;
   width: -webkit-fill-available;
+  margin-top: 80px;
   padding-left: 88px;
   padding-right: 88px;
+  gap: 24px;
+}
+
+.schoolListItems {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .schoolListItem {
@@ -194,6 +204,14 @@ h1 {
   gap: 24px;
   border: 1px solid var(--neutral100);
   border-radius: 8px;
+  background-color: var(--neutralWhite);
+}
+
+.schoolListBtn {
+  align-self: center;
+  color: var(--primary700);
+  border: 1px solid var(--primary700);
+  border-radius: 4px;
   background-color: var(--neutralWhite);
 }
 
@@ -247,6 +265,7 @@ h1 {
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  gap: 24px;
 }
 
 .footerContent {
@@ -254,4 +273,5 @@ h1 {
   flex: 1;
   align-items: center;
   gap: 48px;
+  margin-bottom: 24px;
 }
