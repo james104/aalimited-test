@@ -4,6 +4,7 @@ import { School } from "../../types/school";
 import Btn from "../common/Btn";
 import SchoolListItem from "./SchoolListItem";
 import { iconName } from "../../utils/icon/const";
+import Icon from "../common/Icon";
 
 const SchoolList: FC<{
   fetchingSchools: boolean;
@@ -21,7 +22,9 @@ const SchoolList: FC<{
   return (
     <div className="schoolList">
       <div>
-        <h2>Popular schools</h2>
+        <h2>
+          Popular schools <Icon name={iconName.info} width={32} height={32} />
+        </h2>
       </div>
       <div className="schoolListItems">
         {noResults ? (

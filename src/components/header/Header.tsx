@@ -4,6 +4,7 @@ import Btn from "../common/Btn";
 import HeaderTab from "./HeaderTab";
 import Logo from "./Logo";
 import { iconName } from "../../utils/icon/const";
+import LangDropdown from "./LangDropdown";
 
 const Header: FC = () => {
   const tabs = useMemo<HeaderTabProps[]>(
@@ -37,6 +38,7 @@ const Header: FC = () => {
       <div className="header">
         <Logo />
         <div className="headerActions">
+          <LangDropdown />
           <Btn
             iconName={iconName.call}
             iconFlip={true}
