@@ -41,6 +41,10 @@
   --warning600: #dc2626;
   --warning800: #991b1b;
 
+  --inputFocusBorder: #fbbf24;
+  --inputFocusShadow: #fbbf2466;
+  --schoolItemHover: #00000026;
+
   color: var(--neutralBlack);
 }
 
@@ -164,6 +168,10 @@ h3 {
   color: var(--neutralWhite);
 }
 
+.btn:hover {
+  background-color: var(--primary900);
+}
+
 .header {
   display: inline-flex;
   padding-top: 16px;
@@ -191,7 +199,18 @@ h3 {
 
 .headerTab {
   color: var(--neutral800);
+  border: 2px solid transparent;
+  border-radius: unset;
   background-color: unset;
+}
+
+.headerTab:hover {
+  background-color: unset;
+}
+
+.headerTab:hover {
+  color: var(--primary700);
+  border-bottom: 2px solid var(--primary600);
 }
 
 .banner {
@@ -258,6 +277,12 @@ h3 {
   border-radius: 8px;
 }
 
+.schoolSearchBarInput:focus {
+  outline: none;
+  border: 2px solid var(--inputFocusBorder);
+  box-shadow: 0px 0px 0px 4px var(--inputFocusShadow);
+}
+
 .schoolList {
   display: flex;
   flex-direction: column;
@@ -283,6 +308,10 @@ h3 {
   border: 1px solid var(--neutral100);
   border-radius: 8px;
   background-color: var(--neutralWhite);
+}
+
+.schoolListItem:hover {
+  box-shadow: 0px 4px 8px 3px var(--schoolItemHover);
 }
 
 .schoolListBtn {
@@ -358,13 +387,15 @@ h3 {
   display: flex;
   flex: 1;
   align-items: center;
-  gap: 48px;
 }
 
 .footerBtn {
-  padding: unset;
   font-weight: 600;
   line-height: 125%;
   color: var(--primary900);
   background-color: unset;
+}
+
+.footerBtn:hover {
+  background-color: var(--primary100);
 }
