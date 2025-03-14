@@ -9,7 +9,7 @@ const HeaderTab: FC<HeaderTabProps> = ({ name, url }) => {
   }, [url]);
 
   return (
-    <Btn onClick={toUrl} className="headerTab">
+    <Btn onClick={toUrl} className="headerTab btn-disable-hover">
       {name}
     </Btn>
   );

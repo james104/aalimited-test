@@ -54,6 +54,7 @@ const HomeContent: FC<{}> = ({}) => {
     ]
   );
   useEffect(() => {
+    // TODO: may migrate to Server Side Rendering (SSR) or Server Components, for better UX
     searchSchools();
   }, []);
 

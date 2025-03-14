@@ -3,6 +3,7 @@ import React, { useCallback } from "react";
 import { School } from "../../types/school";
 import Btn from "../common/Btn";
 import SchoolListItem from "./SchoolListItem";
+import { iconName } from "../../utils/icon/const";
 
 const SchoolList: FC<{
   fetchingSchools: boolean;
@@ -33,7 +34,12 @@ const SchoolList: FC<{
         {fetchingSchools && <p>Fetching Schools...</p>}
       </div>
       {showMoreBtn && (
-        <Btn className="schoolListBtn" onClick={fetchNextPage}>
+        <Btn
+          className="schoolListBtn btn-disable-hover"
+          onClick={fetchNextPage}
+          iconName={iconName.add}
+          iconFlip={true}
+        >
           More
         </Btn>
       )}

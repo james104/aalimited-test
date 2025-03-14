@@ -3,6 +3,7 @@ import { HeaderTabProps } from "../../types/header";
 import Btn from "../common/Btn";
 import HeaderTab from "./HeaderTab";
 import Logo from "./Logo";
+import { iconName } from "../../utils/icon/const";
 
 const Header: FC = () => {
   const tabs = useMemo<HeaderTabProps[]>(
@@ -36,10 +37,14 @@ const Header: FC = () => {
       <div className="header">
         <Logo />
         <div className="headerActions">
-          <Btn style={{ color: "var(--primary900)", backgroundColor: "unset" }}>
+          <Btn
+            iconName={iconName.call}
+            iconFlip={true}
+            style={{ color: "var(--primary900)", backgroundColor: "unset" }}
+          >
             Contact Us
           </Btn>
-          <Btn>Login</Btn>
+          <Btn iconName={iconName.login}>Login</Btn>
         </div>
       </div>
       <div className="headerTabs">

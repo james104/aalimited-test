@@ -4,6 +4,8 @@ import { School } from "../../types/school";
 import SchoolListItemAddress from "./SchoolListItemAddress";
 import SchoolListItemDate from "./SchoolListItemDate";
 import SchoolListItemType from "./SchoolListItemType";
+import Btn from "../common/Btn";
+import { iconName } from "../../utils/icon/const";
 
 const SchoolListItem: FC<{ school: School }> = ({
   school: { name, type, address, lastUpdatedDate },
@@ -20,6 +22,10 @@ const SchoolListItem: FC<{ school: School }> = ({
           <SchoolListItemType type={type} />
         </div>
       </div>
+      <Btn
+        className="schoolListItemBookmark btn-disable-hover"
+        iconName={iconName.bookmark}
+      />
     </div>
   );
 };
