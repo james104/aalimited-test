@@ -20,7 +20,7 @@ const SchoolList: FC<{
   return (
     <div className="schoolList">
       <div>
-        <p>Popular schools</p>
+        <h2>Popular schools</h2>
       </div>
       <div className="schoolListItems">
         {noResults ? (

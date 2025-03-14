@@ -8,7 +8,9 @@ const SchoolListItemAddress: FC<Pick<School, "address">> = ({ address }) => {
   return (
     <div className="schoolListItemAddress">
       <Img src={addressImg} />
-      <p>{address}</p>
+      <p className="font-caption2" style={{ color: "var(--neutral600)" }}>
+        {address}
+      </p>
     </div>
   );
 };

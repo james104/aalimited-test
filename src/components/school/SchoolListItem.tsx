@@ -10,7 +10,9 @@ const SchoolListItem: FC<{ school: School }> = ({
 }) => {
   return (
     <div className="schoolListItem">
-      <p>{name}</p>
+      <p className="font-subtitle" style={{ color: "var(--secondary700)" }}>
+        {name}
+      </p>
       <div className="schoolListItemData schoolListItemDataLeft">
         <SchoolListItemAddress address={address} />
         <div className="schoolListItemData schoolListItemDataRight">

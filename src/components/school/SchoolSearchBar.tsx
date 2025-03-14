@@ -16,7 +16,7 @@ const SchoolSearchBar: FC<{
   return (
     <div className="schoolSearchBar">
       <input
-        className="schoolSearchBarInput"
+        className="schoolSearchBarInput font-caption1"
         placeholder="Search School Address"
         onChange={onChange}
       />

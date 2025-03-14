@@ -6,7 +6,9 @@ import { School } from "../../types/school";
 const SchoolListItemType: FC<Pick<School, "type">> = ({ type }) => {
   return (
     <div className="schoolListItemType">
-      <p>{type}</p>
+      <p className="font-label2" style={{ color: "var(--primary600)" }}>
+        {type}
+      </p>
     </div>
   );
 };

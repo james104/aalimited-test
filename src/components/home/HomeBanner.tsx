@@ -6,9 +6,9 @@ const HomeBanner: FC = () => {
   return (
     <div className="banner" style={{ backgroundImage: `url(${banner})` }}>
       <div className="bannerText">
-        <p>Welcome to the AIO Study Platform</p>
+        <p className="font-subtitle">Welcome to the AIO Study Platform</p>
         <h1>All-in-One Platform for Self-Learners</h1>
-        <p>
+        <p className="font-body1">
           Lorem ipsum dolor sit amet consectetur. Pellentesque velit id sodales
           et at fermentum. Sed id egestas nec odio sit.
         </p>

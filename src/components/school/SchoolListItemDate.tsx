@@ -8,8 +8,12 @@ const SchoolListItemDate: FC<Pick<School, "lastUpdatedDate">> = ({
 }) => {
   return (
     <div className="schoolListItemDate">
-      <p>Last Updated Date</p>
-      <p>{lastUpdatedDate}</p>
+      <p className="font-caption2" style={{ color: "var(--neutral600)" }}>
+        Last Updated Date
+      </p>
+      <p className="font-label2" style={{ color: "var(--neutral800)" }}>
+        {lastUpdatedDate}
+      </p>
     </div>
   );
 };

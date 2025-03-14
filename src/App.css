@@ -4,7 +4,8 @@
   align-items: center;
   height: -webkit-fill-available;
 
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, Noto Serif HK, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   /* line-height: 1.5; */
   font-weight: 400;
 
@@ -69,6 +70,82 @@ h1 {
   color: var(--primary700);
 }
 
+h2 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-family: "Noto Serif HK";
+  color: var(--neutral600);
+}
+
+h3 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0;
+  font-family: "Noto Serif HK";
+}
+
+.font-subtitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0;
+  font-family: "Inter";
+}
+
+.font-body1 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-family: "Inter";
+}
+
+.font-body2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-family: "Inter";
+}
+
+.font-label1 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0;
+  font-family: "Inter";
+}
+
+.font-label2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-family: "Inter";
+}
+
+.font-caption1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+  font-family: "Inter";
+}
+
+.font-caption2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-family: "Inter";
+}
+
 #root {
   display: flex;
   flex: 1;
@@ -109,7 +186,7 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 32px;
-  background-color: var(--primary100);
+  background-color: var(--primary50);
 }
 
 .headerTab {
@@ -136,7 +213,7 @@ h1 {
 }
 
 .bannerBtn {
-  margin-top: 32px;
+  margin-top: 20px;
   background-color: var(--primary700);
 }
 
@@ -185,7 +262,8 @@ h1 {
   display: flex;
   flex-direction: column;
   width: -webkit-fill-available;
-  margin-top: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   padding-left: 88px;
   padding-right: 88px;
   gap: 24px;
@@ -266,12 +344,27 @@ h1 {
   padding-top: 40px;
   padding-bottom: 40px;
   gap: 24px;
+  border-top: 1px solid var(--neutral100);
 }
 
 .footerContent {
   display: flex;
   flex: 1;
   align-items: center;
-  gap: 48px;
   margin-bottom: 24px;
+}
+
+.footerBtns {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 48px;
+}
+
+.footerBtn {
+  padding: unset;
+  font-weight: 600;
+  line-height: 125%;
+  color: var(--primary900);
+  background-color: unset;
 }

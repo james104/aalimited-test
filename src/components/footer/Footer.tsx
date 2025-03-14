@@ -3,6 +3,7 @@ import React from "react";
 import w3c from "../../assets/images/w3c.svg";
 import wfa from "../../assets/images/wfa.svg";
 import Img from "../common/Img";
+import FooterBtn from "./FooterBtn";
 
 const Footer: FC<{}> = ({}) => {
   return (
@@ -11,10 +12,10 @@ const Footer: FC<{}> = ({}) => {
         <Img src={w3c} />
         <Img src={wfa} />
       </div>
-      <div className="footerContent">
-        <p>Important Legal Notices</p>
-        <p>Sitemap</p>
-        <p>Accessibility</p>
+      <div className="footerBtns">
+        <FooterBtn>Important Legal Notices</FooterBtn>
+        <FooterBtn>Sitemap</FooterBtn>
+        <FooterBtn>Accessibility</FooterBtn>
       </div>
       <p>Copyright © AIO Study Platform</p>
     </div>
