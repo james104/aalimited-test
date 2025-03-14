@@ -280,6 +280,7 @@ h3 {
   padding-left: 88px;
   background-repeat: no-repeat;
   background-position: center;
+  animation: fadeIn 1.5s;
 }
 
 .bannerText {
@@ -288,6 +289,38 @@ h3 {
   align-items: flex-start;
   width: 44%;
   gap: 12px;
+  animation: fadeInFromTop 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .bannerBtn {
@@ -327,6 +360,7 @@ h3 {
   border-radius: 32px;
   backdrop-filter: blur(24px);
   gap: 16px;
+  animation: fadeInFromTop 3s;
 }
 
 .schoolSearchBarInput {
@@ -351,6 +385,7 @@ h3 {
   padding-left: 88px;
   padding-right: 88px;
   gap: 24px;
+  animation: fadeInFromBottom 3s;
 }
 
 .schoolListItems {
